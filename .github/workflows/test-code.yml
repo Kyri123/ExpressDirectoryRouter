@@ -1,6 +1,9 @@
-name: Node.js Package
+name: Test Package
 
 on:
+    pull_request:
+        branches:
+            - '*'
     push:
         branches:
             - '*'
