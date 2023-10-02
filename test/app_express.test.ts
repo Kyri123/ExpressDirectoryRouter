@@ -4,7 +4,7 @@ import request from 'supertest';
 import { app, config } from './lib/test-base';
 
 describe('JSend', () => {
-	test('[Success] Should Match the default format', async () => {
+	test('Success: Should Match the default format', async () => {
 		await expect(
 			jsend(ResponseStatus.Success, {
 				data: { message: 'Hello World' }
@@ -15,7 +15,7 @@ describe('JSend', () => {
 		});
 	});
 
-	test('[Success] Should Match with path format', async () => {
+	test('Success: Should Match with path format', async () => {
 		await expect(
 			jsend(ResponseStatus.Success, {
 				data: { message: 'Hello World' },
@@ -28,7 +28,7 @@ describe('JSend', () => {
 		});
 	});
 
-	test('[Fail] Should Match the default format', async () => {
+	test('Fail: Should Match the default format', async () => {
 		await expect(
 			jsend(ResponseStatus.Fail, {
 				data: { message: 'Hello World' }
@@ -39,7 +39,7 @@ describe('JSend', () => {
 		});
 	});
 
-	test('[Fail] Should Match with path format', async () => {
+	test('Fail: Should Match with path format', async () => {
 		await expect(
 			jsend(ResponseStatus.Fail, {
 				data: { message: 'Hello World' },
@@ -52,7 +52,7 @@ describe('JSend', () => {
 		});
 	});
 
-	test('[Error] Should Match default format', async () => {
+	test('Err: Should Match default format', async () => {
 		await expect(
 			jsend(ResponseStatus.Error, {
 				path: '/test',
@@ -67,7 +67,7 @@ describe('JSend', () => {
 		});
 	});
 
-	test('[Error] Should Match with data format', async () => {
+	test('Err: Should Match with data format', async () => {
 		await expect(
 			jsend(ResponseStatus.Error, {
 				path: '/test',
