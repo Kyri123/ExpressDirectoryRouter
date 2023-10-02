@@ -1,5 +1,5 @@
 {
-	"name": "express-dir-router",
+	"name": "@kyrium/express-app-router",
 	"version": "1.0.0",
 	"private": false,
 	"author": "Oliver Kaufmann <kaufmann.oliver@siemens.com>",
