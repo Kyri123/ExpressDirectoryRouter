@@ -1,0 +1,33 @@
+{
+	"ts-node": {
+		"files": true
+	},
+	"compilerOptions": {
+		"declarationDir": "./dist/types",
+		"declaration": true,
+		"target": "ESNext",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"strict": true,
+		"importHelpers": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"forceConsistentCasingInFileNames": true,
+		"removeComments": true,
+		"noImplicitAny": false,
+		"isolatedModules": false,
+		"noEmit": true,
+		"lib": ["ESNext", "dom"],
+		"paths": {
+			"@test/*": ["./test/*"],
+			"@dist/*": ["./dist/cjs/*"]
+		},
+		"typeRoots": ["node_modules/@types", "./src/Types"],
+		"types": ["node", "jest"],
+		"sourceMap": true
+	},
+	"include": ["./src/**/*.ts", "./dist/**/*.ts", "./test/**/*.ts"]
+}

@@ -1,0 +1,7 @@
+{
+	"verbose": true,
+	"watch": ["./src/**/*.ts", "./test/**/*.ts"],
+	"ignore": [".git", "node_modules", "dist"],
+	"ext": "ts",
+	"exec": "pnpm run test"
+}
