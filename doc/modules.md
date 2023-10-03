@@ -84,7 +84,7 @@ if true, the notFoundHandler is installed
 
 #### Defined in
 
-[types/settings.ts:61](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/settings.ts#L61)
+[types/settings.ts:61](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/settings.ts#L61)
 
 ---
 
@@ -121,7 +121,7 @@ the middlewares that installed to the route
 
 #### Defined in
 
-[types/settings.ts:46](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/settings.ts#L46)
+[types/settings.ts:46](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/settings.ts#L46)
 
 ---
 
@@ -196,7 +196,7 @@ if set, the format of the error will be overwritten
 
 #### Defined in
 
-[types/settings.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/settings.ts#L19)
+[types/settings.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/settings.ts#L19)
 
 ---
 
@@ -214,7 +214,7 @@ const app: ExpressApp = express();
 
 #### Defined in
 
-[types/func.ts:72](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L72)
+[types/func.ts:72](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L72)
 
 ---
 
@@ -237,7 +237,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:44](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/jsend.ts#L44)
+[helper/jsend.ts:44](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/jsend.ts#L44)
 
 ---
 
@@ -269,7 +269,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/jsend.ts#L19)
+[helper/jsend.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/jsend.ts#L19)
 
 ---
 
@@ -299,7 +299,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:31](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/jsend.ts#L31)
+[helper/jsend.ts:31](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/jsend.ts#L31)
 
 ---
 
@@ -337,7 +337,7 @@ const middleware: MiddleWareInit = (payload) => {
 
 #### Defined in
 
-[types/func.ts:45](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L45)
+[types/func.ts:45](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L45)
 
 ---
 
@@ -364,7 +364,7 @@ const middleware: MiddlewareFunction = async (request, response, next) => {
 
 #### Defined in
 
-[types/func.ts:29](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L29)
+[types/func.ts:29](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L29)
 
 ---
 
@@ -407,7 +407,7 @@ const middleware: MiddlewareFunctionHandler = async (request, response, next) =>
 
 #### Defined in
 
-[types/func.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L13)
+[types/func.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L13)
 
 ---
 
@@ -455,7 +455,7 @@ const middleware: MiddlewareFunctionQuery = {
 
 #### Defined in
 
-[types/func.ts:94](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L94)
+[types/func.ts:94](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L94)
 
 ---
 
@@ -472,7 +472,7 @@ const middleware: MiddlewareFunctionQuery = {
 
 #### Defined in
 
-[types/func.ts:107](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L107)
+[types/func.ts:107](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L107)
 
 ---
 
@@ -518,7 +518,7 @@ const route: RoutingFunction = async ({ request, response, next, payload }) => {
 
 #### Defined in
 
-[types/func.ts:57](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/types/func.ts#L57)
+[types/func.ts:57](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/types/func.ts#L57)
 
 ---
 
@@ -536,7 +536,7 @@ const route: ValidMethods = 'get';
 
 #### Defined in
 
-[installer/const.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/installer/const.ts#L8)
+[installer/const.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/installer/const.ts#L8)
 
 ## Variables
 
@@ -548,7 +548,7 @@ valid methods for the route
 
 #### Defined in
 
-[installer/const.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/installer/const.ts#L13)
+[installer/const.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/installer/const.ts#L13)
 
 ## Functions
 
@@ -590,7 +590,7 @@ const mittleware: RoutingFunction = asyncHandler(async ({ request, response, nex
 
 #### Defined in
 
-[helper/asyncHandler.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/asyncHandler.ts#L16)
+[helper/asyncHandler.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/asyncHandler.ts#L16)
 
 ---
 
@@ -650,7 +650,7 @@ const settings: AppExpressSettings = {
 
 #### Defined in
 
-[installer/index.ts:43](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/installer/index.ts#L43)
+[installer/index.ts:43](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/installer/index.ts#L43)
 
 ---
 
@@ -686,7 +686,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:56](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/jsend.ts#L56)
+[helper/jsend.ts:56](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/jsend.ts#L56)
 
 ---
 
@@ -727,4 +727,4 @@ const mittlewares: RoutingFunction = wrapInHandler([
 
 #### Defined in
 
-[helper/asyncHandler.ts:41](https://github.com/Kyri123/ExpressDirectoryRouter/blob/8ebc48e/src/helper/asyncHandler.ts#L41)
+[helper/asyncHandler.ts:41](https://github.com/Kyri123/ExpressDirectoryRouter/blob/2eae103/src/helper/asyncHandler.ts#L41)

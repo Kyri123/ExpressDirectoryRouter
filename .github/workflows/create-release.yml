@@ -35,7 +35,7 @@ jobs:
                       ci: CI
                       style: Code Style
                       revert: Reverts
-                  release-name: 'Release: v${{ steps.get-version.outputs.version }}'
+                  release-name: ${{ steps.get-version.outputs.version }}
                   mention-authors: true
                   mention-new-contributors: true
                   include-compare-link: true
