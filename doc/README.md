@@ -2,7 +2,7 @@
 
 # ExpressDirectoryRouter
 
-[![Version package](https://badgen.net/npm/v/embedgenerator)](https://npmjs.com/package/embedgenerator) [![DL TOTAL](https://badgen.net/npm/dt/@kyri123/express-app-router)](https://npmjs.com/package/@kyri123/express-app-router) <!--[![LATEST RELEASE](https://badgen.net/github/release/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)--> [![ALL CONTRIBUTOR](https://badgen.net/github/contributors/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)
+[![Version package](https://badgen.net/npm/v/@kyri123/express-app-router)](https://npmjs.com/@kyri123/express-app-router) [![DL TOTAL](https://badgen.net/npm/dt/@kyri123/express-app-router)](https://npmjs.com/package/@kyri123/express-app-router) <!--[![LATEST RELEASE](https://badgen.net/github/release/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)--> [![ALL CONTRIBUTOR](https://badgen.net/github/contributors/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)
 
 ExpressDirectoryRouter is a lightweight and flexible middleware for Express.js that simplifies routing by automatically handling routes based on the structure of your project directories.
 
