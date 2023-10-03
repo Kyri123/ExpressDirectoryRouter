@@ -41,7 +41,7 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/1662d5b/src/helper/errorClass.ts#L16)
+[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/d3a238f/src/helper/errorClass.ts#L16)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/1662d5b/src/helper/errorClass.ts#L8)
+[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/d3a238f/src/helper/errorClass.ts#L8)
 
 ---
 
@@ -61,4 +61,4 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/1662d5b/src/helper/errorClass.ts#L9)
+[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/d3a238f/src/helper/errorClass.ts#L9)
