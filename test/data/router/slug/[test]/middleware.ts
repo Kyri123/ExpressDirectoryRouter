@@ -8,4 +8,12 @@ const GLOBAL: MiddleWareInit = async (payload) => {
 	];
 };
 
-export { GLOBAL };
+const WILDCARD: MiddleWareInit = async (payload) => {
+	return [
+		(req, res, next) => {
+			return next();
+		}
+	];
+};
+
+export { GLOBAL, WILDCARD };
