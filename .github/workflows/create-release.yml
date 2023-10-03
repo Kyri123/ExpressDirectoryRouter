@@ -22,7 +22,7 @@ jobs:
               uses: ardalanamini/auto-changelog@v4
               id: changelog
               with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  github-token: ${{ secrets.GH_TOKEN }}
                   commit-types: |
                       feat: New Features
                       fix: Bug Fixes
@@ -46,7 +46,7 @@ jobs:
             - name: Create Release
               uses: softprops/action-gh-release@v1
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
               with:
                   body: |
                       ${{ steps.changelog.outputs.changelog }}
