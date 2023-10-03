@@ -2,25 +2,24 @@
 
 # Class: ApiError
 
-Custom error class for API errors
-they are thrown by the backend and help to identify the status code
+Custom error class for API errors they are thrown by the backend and help to identify the status code
 
 ## Hierarchy
 
-- `Error`
+-   `Error`
 
-  ↳ **`ApiError`**
+    ↳ **`ApiError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](ApiError.md#constructor)
+-   [constructor](ApiError.md#constructor)
 
 ### Properties
 
-- [errCode](ApiError.md#errcode)
-- [status](ApiError.md#status)
+-   [errCode](ApiError.md#errcode)
+-   [status](ApiError.md#status)
 
 ## Constructors
 
@@ -30,11 +29,11 @@ they are thrown by the backend and help to identify the status code
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `errCode` | `number` | `undefined` | the error code |
-| `message` | `string` | `undefined` | the error message |
-| `status` | [`ResponseStatus`](../enums/ResponseStatus.md) | `ResponseStatus.Error` | the status of the error |
+| Name      | Type                                           | Default value          | Description             |
+| :-------- | :--------------------------------------------- | :--------------------- | :---------------------- |
+| `errCode` | `number`                                       | `undefined`            | the error code          |
+| `message` | `string`                                       | `undefined`            | the error message       |
+| `status`  | [`ResponseStatus`](../enums/ResponseStatus.md) | `ResponseStatus.Error` | the status of the error |
 
 #### Overrides
 
@@ -42,7 +41,7 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/errorClass.ts#L16)
+[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/errorClass.ts#L16)
 
 ## Properties
 
@@ -52,9 +51,9 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/errorClass.ts#L8)
+[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/errorClass.ts#L8)
 
-___
+---
 
 ### status
 
@@ -62,4 +61,4 @@ ___
 
 #### Defined in
 
-[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/errorClass.ts#L9)
+[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/errorClass.ts#L9)

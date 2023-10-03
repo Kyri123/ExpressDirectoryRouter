@@ -6,50 +6,54 @@ JSend Status for the response
 
 **`Param`**
 
-the response was successful
+All went well, and (usually) some data was returned.
 
 **`Param`**
 
-the response was not successful
+There was a problem with the data submitted, or some pre-condition of the API call wasn't satisfied
 
 **`Param`**
 
-the response was an error
+An error occurred in processing the request, i.e. an exception was thrown
+
+**`See`**
+
+https://github.com/omniti-labs/jsend
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [Error](ResponseStatus.md#error)
-- [Fail](ResponseStatus.md#fail)
-- [Success](ResponseStatus.md#success)
+-   [Error](ResponseStatus.md#error)
+-   [Fail](ResponseStatus.md#fail)
+-   [Success](ResponseStatus.md#success)
 
 ## Enumeration Members
 
 ### Error
 
-• **Error** = ``"error"``
+• **Error** = `"error"`
 
 #### Defined in
 
-[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L10)
+[helper/jsend.ts:11](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L11)
 
-___
+---
 
 ### Fail
 
-• **Fail** = ``"fail"``
+• **Fail** = `"fail"`
 
 #### Defined in
 
-[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L9)
+[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L10)
 
-___
+---
 
 ### Success
 
-• **Success** = ``"success"``
+• **Success** = `"success"`
 
 #### Defined in
 
-[helper/jsend.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L8)
+[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L9)

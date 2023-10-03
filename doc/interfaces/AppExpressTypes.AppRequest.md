@@ -10,18 +10,18 @@ overwrite Types here for global use
 
 ```ts
 declare global {
-  namespace AppRequest {
-    interface Payload {
-  	 upload: string;
-  	 app: string;
-  	 config: string;
-    }
-  }
+	namespace AppRequest {
+		interface Payload {
+			upload: string;
+			app: string;
+			config: string;
+		}
+	}
 }
 ```
 
 ## Hierarchy
 
-- `Request`
+-   `Request`
 
-  ↳ **`AppRequest`**
+    ↳ **`AppRequest`**

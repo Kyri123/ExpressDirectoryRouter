@@ -6,43 +6,43 @@
 
 ### Namespaces
 
-- [AppExpressTypes](modules/AppExpressTypes.md)
+-   [AppExpressTypes](modules/AppExpressTypes.md)
 
 ### Enumerations
 
-- [ResponseStatus](enums/ResponseStatus.md)
+-   [ResponseStatus](enums/ResponseStatus.md)
 
 ### Classes
 
-- [ApiError](classes/ApiError.md)
+-   [ApiError](classes/ApiError.md)
 
 ### Type Aliases
 
-- [AppExpressInstallResult](modules.md#appexpressinstallresult)
-- [AppExpressRouteResult](modules.md#appexpressrouteresult)
-- [AppExpressSettings](modules.md#appexpresssettings)
-- [ExpressApp](modules.md#expressapp)
-- [JSendObject](modules.md#jsendobject)
-- [JSendObjectError](modules.md#jsendobjecterror)
-- [JSendObjectResult](modules.md#jsendobjectresult)
-- [MiddleWareInit](modules.md#middlewareinit)
-- [MiddlewareFunction](modules.md#middlewarefunction)
-- [MiddlewareFunctionHandler](modules.md#middlewarefunctionhandler)
-- [MiddlewareFunctionQuery](modules.md#middlewarefunctionquery)
-- [RouteQuery](modules.md#routequery)
-- [RoutingFunction](modules.md#routingfunction)
-- [ValidMethods](modules.md#validmethods)
+-   [AppExpressInstallResult](modules.md#appexpressinstallresult)
+-   [AppExpressRouteResult](modules.md#appexpressrouteresult)
+-   [AppExpressSettings](modules.md#appexpresssettings)
+-   [ExpressApp](modules.md#expressapp)
+-   [JSendObject](modules.md#jsendobject)
+-   [JSendObjectError](modules.md#jsendobjecterror)
+-   [JSendObjectResult](modules.md#jsendobjectresult)
+-   [MiddleWareInit](modules.md#middlewareinit)
+-   [MiddlewareFunction](modules.md#middlewarefunction)
+-   [MiddlewareFunctionHandler](modules.md#middlewarefunctionhandler)
+-   [MiddlewareFunctionQuery](modules.md#middlewarefunctionquery)
+-   [RouteQuery](modules.md#routequery)
+-   [RoutingFunction](modules.md#routingfunction)
+-   [ValidMethods](modules.md#validmethods)
 
 ### Variables
 
-- [validMethods](modules.md#validmethods-1)
+-   [validMethods](modules.md#validmethods-1)
 
 ### Functions
 
-- [asyncHandler](modules.md#asynchandler)
-- [installAppExpress](modules.md#installappexpress)
-- [jsend](modules.md#jsend)
-- [wrapInHandler](modules.md#wrapinhandler)
+-   [asyncHandler](modules.md#asynchandler)
+-   [installAppExpress](modules.md#installappexpress)
+-   [jsend](modules.md#jsend)
+-   [wrapInHandler](modules.md#wrapinhandler)
 
 ## Type Aliases
 
@@ -74,19 +74,19 @@ if true, the notFoundHandler is installed
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `cookieParser` | `boolean` |
-| `errorHandler` | `boolean` |
-| `globalMiddlewares` | [`MiddlewareFunction`](modules.md#middlewarefunction)[] |
-| `installedRoutes` | [`AppExpressRouteResult`](modules.md#appexpressrouteresult)[] |
-| `notFoundHandler` | `boolean` |
+| Name                | Type                                                          |
+| :------------------ | :------------------------------------------------------------ |
+| `cookieParser`      | `boolean`                                                     |
+| `errorHandler`      | `boolean`                                                     |
+| `globalMiddlewares` | [`MiddlewareFunction`](modules.md#middlewarefunction)[]       |
+| `installedRoutes`   | [`AppExpressRouteResult`](modules.md#appexpressrouteresult)[] |
+| `notFoundHandler`   | `boolean`                                                     |
 
 #### Defined in
 
-[types/settings.ts:61](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/settings.ts#L61)
+[types/settings.ts:61](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/settings.ts#L61)
 
-___
+---
 
 ### AppExpressRouteResult
 
@@ -112,18 +112,18 @@ the middlewares that installed to the route
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `method` | `string` |
+| Name          | Type                                                    |
+| :------------ | :------------------------------------------------------ |
+| `method`      | `string`                                                |
 | `middlewares` | [`MiddlewareFunction`](modules.md#middlewarefunction)[] |
-| `path` | `string` |
-| `routePath` | `string` |
+| `path`        | `string`                                                |
+| `routePath`   | `string`                                                |
 
 #### Defined in
 
-[types/settings.ts:46](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/settings.ts#L46)
+[types/settings.ts:46](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/settings.ts#L46)
 
-___
+---
 
 ### AppExpressSettings
 
@@ -178,14 +178,14 @@ if set, the format of the error will be overwritten
 #### Type declaration
 
 | Name | Type |
-| :------ | :------ |
-| `errorHandler?` | { `overwriteFormat?`: (`error`: [`ApiError`](classes/ApiError.md) \| `Error` \| `ZodError`) => `object` ; `resolveZodError?`: `boolean`  } |
+| :-- | :-- |
+| `errorHandler?` | { `overwriteFormat?`: (`error`: [`ApiError`](classes/ApiError.md) \| `Error` \| `ZodError`) => `object` ; `resolveZodError?`: `boolean` } |
 | `errorHandler.overwriteFormat?` | (`error`: [`ApiError`](classes/ApiError.md) \| `Error` \| `ZodError`) => `object` |
 | `errorHandler.resolveZodError?` | `boolean` |
-| `loggings?` | { `logInCatch?`: `boolean` ; `logRoutings?`: `boolean`  } |
+| `loggings?` | { `logInCatch?`: `boolean` ; `logRoutings?`: `boolean` } |
 | `loggings.logInCatch?` | `boolean` |
 | `loggings.logRoutings?` | `boolean` |
-| `middlewares?` | { `cookieParser?`: `boolean` ; `errorHandler?`: `boolean` ; `globalMiddlewares?`: (`payload`: [`Payload`](interfaces/AppExpressTypes.Payload.md)) => [`MiddlewareFunction`](modules.md#middlewarefunction)[] \| `Promise`<[`MiddlewareFunction`](modules.md#middlewarefunction)[]\> ; `notFoundHandler?`: `boolean` ; `notFoundHandlerFunction`: [`RoutingFunction`](modules.md#routingfunction)  } |
+| `middlewares?` | { `cookieParser?`: `boolean` ; `errorHandler?`: `boolean` ; `globalMiddlewares?`: (`payload`: [`Payload`](interfaces/AppExpressTypes.Payload.md)) => [`MiddlewareFunction`](modules.md#middlewarefunction)[] \| `Promise`<[`MiddlewareFunction`](modules.md#middlewarefunction)[]\> ; `notFoundHandler?`: `boolean` ; `notFoundHandlerFunction`: [`RoutingFunction`](modules.md#routingfunction) } |
 | `middlewares.cookieParser?` | `boolean` |
 | `middlewares.errorHandler?` | `boolean` |
 | `middlewares.globalMiddlewares?` | (`payload`: [`Payload`](interfaces/AppExpressTypes.Payload.md)) => [`MiddlewareFunction`](modules.md#middlewarefunction)[] \| `Promise`<[`MiddlewareFunction`](modules.md#middlewarefunction)[]\> |
@@ -196,9 +196,9 @@ if set, the format of the error will be overwritten
 
 #### Defined in
 
-[types/settings.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/settings.ts#L19)
+[types/settings.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/settings.ts#L19)
 
-___
+---
 
 ### ExpressApp
 
@@ -214,17 +214,15 @@ const app: ExpressApp = express();
 
 #### Defined in
 
-[types/func.ts:72](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L72)
+[types/func.ts:72](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L72)
 
-___
+---
 
 ### JSendObject
 
-Ƭ **JSendObject**<`Status`, `T`\>: { `status`: `Status`  } & `Status` extends [`Success`](enums/ResponseStatus.md#success) \| [`Fail`](enums/ResponseStatus.md#fail) ? [`JSendObjectResult`](modules.md#jsendobjectresult)<`Status`, `T`\> : [`JSendObjectError`](modules.md#jsendobjecterror)<`Status`, `T`\>
+Ƭ **JSendObject**<`Status`, `T`\>: { `status`: `Status` } & `Status` extends [`Success`](enums/ResponseStatus.md#success) \| [`Fail`](enums/ResponseStatus.md#fail) ? [`JSendObjectResult`](modules.md#jsendobjectresult)<`Status`, `T`\> : [`JSendObjectError`](modules.md#jsendobjecterror)<`Status`, `T`\>
 
-JSend Object
-this is not a real jsend object we add 'code' and 'path' to the error object also an optional 'path' to the result object and
-if the Status is success or fail the data is required (JSendObjectResult) otherwise the message is required (JSendObjectError)
+JSend Object this is not a real jsend object we add 'path' to the error object also an optional if the Status is success or fail the data is required (JSendObjectResult) otherwise the message is required (JSendObjectError)
 
 **`See`**
 
@@ -232,23 +230,22 @@ https://github.com/omniti-labs/jsend
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                |
+| :------- | :-------------------------------------------------- |
 | `Status` | extends [`ResponseStatus`](enums/ResponseStatus.md) |
-| `T` | `any` |
+| `T`      | `any`                                               |
 
 #### Defined in
 
-[helper/jsend.ts:43](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L43)
+[helper/jsend.ts:44](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L44)
 
-___
+---
 
 ### JSendObjectError
 
 Ƭ **JSendObjectError**<`Status`, `T`\>: `Object`
 
-JSend Object Result for Error
-this is not a real jsend object we add 'code' and 'path' to the error object also an optional 'path' to the result object and
+JSend Object Result for Error this is not a real jsend object we add 'path' to the error object also an optional
 
 **`See`**
 
@@ -256,32 +253,31 @@ https://github.com/omniti-labs/jsend
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                |
+| :------- | :-------------------------------------------------- |
 | `Status` | extends [`ResponseStatus`](enums/ResponseStatus.md) |
-| `T` | `any` |
+| `T`      | `any`                                               |
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `code` | `number` |
-| `data?` | `any` |
+| Name      | Type     |
+| :-------- | :------- |
+| `code`    | `number` |
+| `data?`   | `any`    |
 | `message` | `string` |
-| `path` | `string` |
+| `path`    | `string` |
 
 #### Defined in
 
-[helper/jsend.ts:18](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L18)
+[helper/jsend.ts:19](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L19)
 
-___
+---
 
 ### JSendObjectResult
 
 Ƭ **JSendObjectResult**<`Status`, `T`\>: `Object`
 
-JSend Object Result for success and fail
-this is not a real jsend object we add 'code' and 'path' to the error object also an optional 'path' to the result object and
+JSend Object Result for success and fail this is not a real jsend object we add 'path' to the error object also an optional
 
 **`See`**
 
@@ -289,23 +285,23 @@ https://github.com/omniti-labs/jsend
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                |
+| :------- | :-------------------------------------------------- |
 | `Status` | extends [`ResponseStatus`](enums/ResponseStatus.md) |
-| `T` | `any` |
+| `T`      | `any`                                               |
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `any` \| ``null`` |
-| `path?` | `string` |
+| Name    | Type            |
+| :------ | :-------------- |
+| `data`  | `any` \| `null` |
+| `path?` | `string`        |
 
 #### Defined in
 
-[helper/jsend.ts:30](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L30)
+[helper/jsend.ts:31](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L31)
 
-___
+---
 
 ### MiddleWareInit
 
@@ -315,13 +311,12 @@ ___
 
 ▸ (`payload`): [`MiddlewareFunction`](modules.md#middlewarefunction)[] \| `Promise`<[`MiddlewareFunction`](modules.md#middlewarefunction)[]\>
 
-Type for the init function of the middleware
-this will be used in the middleware query
+Type for the init function of the middleware this will be used in the middleware query
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                                               |
+| :-------- | :------------------------------------------------- |
 | `payload` | [`Payload`](interfaces/AppExpressTypes.Payload.md) |
 
 ##### Returns
@@ -332,24 +327,25 @@ this will be used in the middleware query
 
 ```ts
 const middleware: MiddleWareInit = (payload) => {
-	return [async (request, response, next) => {
-		next();
-	}];
+	return [
+		async (request, response, next) => {
+			next();
+		}
+	];
 };
 ```
 
 #### Defined in
 
-[types/func.ts:45](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L45)
+[types/func.ts:45](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L45)
 
-___
+---
 
 ### MiddlewareFunction
 
 Ƭ **MiddlewareFunction**<`Req`, `Res`\>: [`MiddlewareFunctionHandler`](modules.md#middlewarefunctionhandler)<`Req`, `Res`\> \| `express.RequestHandler`<`any`\>
 
-Type for the middleware function
-this will be used in MiddleWareInit
+Type for the middleware function this will be used in MiddleWareInit
 
 **`Example`**
 
@@ -361,16 +357,16 @@ const middleware: MiddlewareFunction = async (request, response, next) => {
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md) |
+| Name  | Type                                                       |
+| :---- | :--------------------------------------------------------- |
+| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md)   |
 | `Res` | [`AppResponse`](interfaces/AppExpressTypes.AppResponse.md) |
 
 #### Defined in
 
-[types/func.ts:29](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L29)
+[types/func.ts:29](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L29)
 
-___
+---
 
 ### MiddlewareFunctionHandler
 
@@ -378,9 +374,9 @@ ___
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md) |
+| Name  | Type                                                       |
+| :---- | :--------------------------------------------------------- |
+| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md)   |
 | `Res` | [`AppResponse`](interfaces/AppExpressTypes.AppResponse.md) |
 
 #### Type declaration
@@ -391,11 +387,11 @@ alias type for MiddlewareFunction
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `request` | `Req` |
-| `response` | `Res` |
-| `next` | `express.NextFunction` |
+| Name       | Type                   |
+| :--------- | :--------------------- |
+| `request`  | `Req`                  |
+| `response` | `Res`                  |
+| `next`     | `express.NextFunction` |
 
 ##### Returns
 
@@ -411,55 +407,57 @@ const middleware: MiddlewareFunctionHandler = async (request, response, next) =>
 
 #### Defined in
 
-[types/func.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L13)
+[types/func.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L13)
 
-___
+---
 
 ### MiddlewareFunctionQuery
 
 Ƭ **MiddlewareFunctionQuery**: `Object`
 
-functions to query the middleware
-like GET, POST, DELETE, ...
-GLOBAL is for the global middleware and will also applied to all routes in sub directories
+functions to query the middleware like GET, POST, DELETE, ... GLOBAL is for the global middleware and will also applied to all routes in sub directories
 
 **`Example`**
 
 ```ts
 const middleware: MiddlewareFunctionQuery = {
 	GLOBAL: (payload) => {
-		return [async (request, response, next) => {
-			next();
-		}];
+		return [
+			async (request, response, next) => {
+				next();
+			}
+		];
 	},
 	GET: (payload) => {
-		return [async (request, response, next) => {
-			next();
-		}];
+		return [
+			async (request, response, next) => {
+				next();
+			}
+		];
 	}
 };
 ```
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `ALL?` | [`MiddleWareInit`](modules.md#middlewareinit) |
+| Name       | Type                                          |
+| :--------- | :-------------------------------------------- |
+| `ALL?`     | [`MiddleWareInit`](modules.md#middlewareinit) |
 | `CONNECT?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `DELETE?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `GET?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `GLOBAL?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `HEAD?` | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `DELETE?`  | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `GET?`     | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `GLOBAL?`  | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `HEAD?`    | [`MiddleWareInit`](modules.md#middlewareinit) |
 | `OPTIONS?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `POST?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `PUT?` | [`MiddleWareInit`](modules.md#middlewareinit) |
-| `TRACE?` | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `POST?`    | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `PUT?`     | [`MiddleWareInit`](modules.md#middlewareinit) |
+| `TRACE?`   | [`MiddleWareInit`](modules.md#middlewareinit) |
 
 #### Defined in
 
-[types/func.ts:94](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L94)
+[types/func.ts:94](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L94)
 
-___
+---
 
 ### RouteQuery
 
@@ -467,45 +465,44 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `default?` | [`RoutingFunction`](modules.md#routingfunction) |
-| `middleware?` | [`MiddleWareInit`](modules.md#middlewareinit) |
+| Name          | Type                                            |
+| :------------ | :---------------------------------------------- |
+| `default?`    | [`RoutingFunction`](modules.md#routingfunction) |
+| `middleware?` | [`MiddleWareInit`](modules.md#middlewareinit)   |
 
 #### Defined in
 
-[types/func.ts:107](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L107)
+[types/func.ts:107](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L107)
 
-___
+---
 
 ### RoutingFunction
 
-Ƭ **RoutingFunction**<`Req`, `Res`\>: (`handle`: { `error?`: `express.Errback` ; `next`: `express.NextFunction` ; `payload`: [`Payload`](interfaces/AppExpressTypes.Payload.md) ; `request`: `Req` ; `response`: `Res`  }) => `Promise`<`any` \| `never`\> \| `any` \| `never`
+Ƭ **RoutingFunction**<`Req`, `Res`\>: (`handle`: { `error?`: `express.Errback` ; `next`: `express.NextFunction` ; `payload`: [`Payload`](interfaces/AppExpressTypes.Payload.md) ; `request`: `Req` ; `response`: `Res` }) => `Promise`<`any` \| `never`\> \| `any` \| `never`
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md) |
+| Name  | Type                                                       |
+| :---- | :--------------------------------------------------------- |
+| `Req` | [`AppRequest`](interfaces/AppExpressTypes.AppRequest.md)   |
 | `Res` | [`AppResponse`](interfaces/AppExpressTypes.AppResponse.md) |
 
 #### Type declaration
 
 ▸ (`handle`): `Promise`<`any` \| `never`\> \| `any` \| `never`
 
-Type for the routing function
-like GET, POST, DELETE, ...
+Type for the routing function like GET, POST, DELETE, ...
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handle` | `Object` |
-| `handle.error?` | `express.Errback` |
-| `handle.next` | `express.NextFunction` |
-| `handle.payload` | [`Payload`](interfaces/AppExpressTypes.Payload.md) |
-| `handle.request` | `Req` |
-| `handle.response` | `Res` |
+| Name              | Type                                               |
+| :---------------- | :------------------------------------------------- |
+| `handle`          | `Object`                                           |
+| `handle.error?`   | `express.Errback`                                  |
+| `handle.next`     | `express.NextFunction`                             |
+| `handle.payload`  | [`Payload`](interfaces/AppExpressTypes.Payload.md) |
+| `handle.request`  | `Req`                                              |
+| `handle.response` | `Res`                                              |
 
 ##### Returns
 
@@ -521,13 +518,13 @@ const route: RoutingFunction = async ({ request, response, next, payload }) => {
 
 #### Defined in
 
-[types/func.ts:57](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/types/func.ts#L57)
+[types/func.ts:57](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/types/func.ts#L57)
 
-___
+---
 
 ### ValidMethods
 
-Ƭ **ValidMethods**: ``"get"`` \| ``"post"`` \| ``"put"`` \| ``"delete"`` \| ``"all"`` \| ``"head"`` \| ``"connect"`` \| ``"options"`` \| ``"trace"`` \| ``"middleware"``
+Ƭ **ValidMethods**: `"get"` \| `"post"` \| `"put"` \| `"delete"` \| `"all"` \| `"head"` \| `"connect"` \| `"options"` \| `"trace"` \| `"middleware"`
 
 valid methods for the route
 
@@ -539,7 +536,7 @@ const route: ValidMethods = 'get';
 
 #### Defined in
 
-[installer/const.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/installer/const.ts#L8)
+[installer/const.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/installer/const.ts#L8)
 
 ## Variables
 
@@ -551,7 +548,7 @@ valid methods for the route
 
 #### Defined in
 
-[installer/const.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/installer/const.ts#L13)
+[installer/const.ts:13](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/installer/const.ts#L13)
 
 ## Functions
 
@@ -559,20 +556,19 @@ valid methods for the route
 
 ▸ **asyncHandler**<`T`\>(`fn`): `T`
 
-handle async functions in express
-and catch the errors to pass them to the error handler (NEXT)
+handle async functions in express and catch the errors to pass them to the error handler (NEXT)
 
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fn` | `T` | the function to wrap |
+| Name | Type | Description          |
+| :--- | :--- | :------------------- |
+| `fn` | `T`  | the function to wrap |
 
 #### Returns
 
@@ -594,9 +590,9 @@ const mittleware: RoutingFunction = asyncHandler(async ({ request, response, nex
 
 #### Defined in
 
-[helper/asyncHandler.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/asyncHandler.ts#L16)
+[helper/asyncHandler.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/asyncHandler.ts#L16)
 
-___
+---
 
 ### installAppExpress
 
@@ -606,9 +602,9 @@ Install the app
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | [`ExpressApp`](modules.md#expressapp) | the express app |
+| Name       | Type                                                  | Description              |
+| :--------- | :---------------------------------------------------- | :----------------------- |
+| `app`      | [`ExpressApp`](modules.md#expressapp)                 | the express app          |
 | `settings` | [`AppExpressSettings`](modules.md#appexpresssettings) | the settings for the app |
 
 #### Returns
@@ -628,9 +624,11 @@ const settings: AppExpressSettings = {
 		errorHandler: true,
 		notFoundHandler: true,
 		globalMiddlewares: (payload) => {
-			return [async (request, response, next) => {
-				next();
-			}];
+			return [
+				async (request, response, next) => {
+					next();
+				}
+			];
 		}
 	},
 	loggings: {
@@ -652,30 +650,29 @@ const settings: AppExpressSettings = {
 
 #### Defined in
 
-[installer/index.ts:43](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/installer/index.ts#L43)
+[installer/index.ts:43](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/installer/index.ts#L43)
 
-___
+---
 
 ### jsend
 
 ▸ **jsend**<`Status`, `T`\>(`status`, `data`): [`JSendObject`](modules.md#jsendobject)<`Status`, `T`\>
 
-just a helper function to create a jsend object in typescript
-this is not a real jsend object we add 'code' and 'path' to the error object also an optional 'path' to the result object and
+just a helper function to create a jsend object in typescript this is not a real jsend object we add 'path' to the error object also an optional
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                |
+| :------- | :-------------------------------------------------- |
 | `Status` | extends [`ResponseStatus`](enums/ResponseStatus.md) |
-| `T` | `any` |
+| `T`      | `any`                                               |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `status` | `Status` | the status of the response |
-| `data` | `Omit`<[`JSendObject`](modules.md#jsendobject)<`Status`, `T`\>, ``"status"``\> | the data to send |
+| Name     | Type                                                                         | Description                |
+| :------- | :--------------------------------------------------------------------------- | :------------------------- |
+| `status` | `Status`                                                                     | the status of the response |
+| `data`   | `Omit`<[`JSendObject`](modules.md#jsendobject)<`Status`, `T`\>, `"status"`\> | the data to send           |
 
 #### Returns
 
@@ -689,9 +686,9 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:55](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L55)
+[helper/jsend.ts:56](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/jsend.ts#L56)
 
-___
+---
 
 ### wrapInHandler
 
@@ -701,8 +698,8 @@ wrap all functions in asyncHandler to catch errors in express
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name  | Type  | Description           |
+| :---- | :---- | :-------------------- |
 | `fns` | `any` | the functions to wrap |
 
 #### Returns
@@ -719,15 +716,15 @@ asyncHandler
 
 ```ts
 const mittlewares: RoutingFunction = wrapInHandler([
-  async ({ request, response, next, payload }) => {
-  	response.send('Hello World');
-  },
-  async ({ request, response, next, payload }) => {
-  	response.send('Hello World');
-  }
+	async ({ request, response, next, payload }) => {
+		response.send('Hello World');
+	},
+	async ({ request, response, next, payload }) => {
+		response.send('Hello World');
+	}
 ]);
 ```
 
 #### Defined in
 
-[helper/asyncHandler.ts:41](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/asyncHandler.ts#L41)
+[helper/asyncHandler.ts:41](https://github.com/Kyri123/ExpressDirectoryRouter/blob/bdf349a/src/helper/asyncHandler.ts#L41)
