@@ -22,7 +22,7 @@ jobs:
               uses: ardalanamini/auto-changelog@v4
               id: changelog
               with:
-                  github-token: ${{ github.token }}
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
                   commit-types: |
                       feat: New Features
                       fix: Bug Fixes
