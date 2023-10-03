@@ -3,6 +3,7 @@ import { cloneDeep } from 'lodash';
 import { join } from 'path';
 import { asyncHandler, wrapInHandler } from '../helper';
 import type { AppExpressInstallResult, AppExpressSettings, ExpressApp, MiddlewareFunction, MiddlewareFunctionQuery, RouteQuery } from '../types';
+import type { ValidMethods } from './const';
 import { validMethods } from './const';
 import { shouldUse } from './validate';
 
@@ -115,7 +116,7 @@ async function installRoute(
 ) {
 	const { middleware: MIDDLEWARE, ...rest } = require(path) as RouteQuery;
 	const ROUTE = rest.default;
-	const METHOD = file.split('.')[0].toLowerCase();
+	const METHOD: ValidMethods = file.split('.')[0].toLowerCase() as ValidMethods;
 	const MIDDLEWARES = [...middlewares];
 
 	if (!validMethods.includes(METHOD)) throw new Error(`invalid method "${METHOD}" in "${path}"`);

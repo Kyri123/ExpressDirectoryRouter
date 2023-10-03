@@ -1,17 +1,20 @@
-name: Node.js Package
+name: Test Package
 
 on:
+    pull_request:
+        branches:
+            - '*'
     push:
         branches:
             - '*'
             - '!master'
 
 jobs:
-    build-and-release:
+    test-app:
         runs-on: ubuntu-20.04
         strategy:
             matrix:
-                node-version: [18]
+                node-version: [16, 18, 20]
         steps:
             - uses: actions/checkout@v3
             - uses: pnpm/action-setup@v2
@@ -30,9 +33,3 @@ jobs:
               run: pnpm install
             - name: Test Package
               run: pnpm run test
-            - name: Build Package
-              run: pnpm run build
-            - name: Push to NPM
-              run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}

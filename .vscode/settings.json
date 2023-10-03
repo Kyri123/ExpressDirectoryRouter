@@ -1,8 +1,8 @@
 {
-    "typescript.tsdk": "node_modules\\typescript\\lib",
-    "editor.codeActionsOnSave": {
-        "formatOnSave": true,
-        "source.fixAll.eslint": true,
-        "source.fixAll": true,
-    },
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"editor.codeActionsOnSave": {
+		"formatOnSave": true,
+		"source.fixAll.eslint": true,
+		"source.fixAll": true
+	}
 }
