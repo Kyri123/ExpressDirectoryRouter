@@ -4,13 +4,17 @@ import type { MiddlewareFunction, RoutingFunction } from './func';
 
 /**
  * Settings for the AppExpress
- * @param source the source folder for the app (should be absolute path) | Default: join(process.cwd(), 'src', 'routes')
- * @param middlewares.cookieParser if true, the cookieParser will be added | Default: false
- * @param middlewares.globalMiddlewares if set, the globalMiddlewares that provided by the function will be added to the root of the app | Default: []
- * @param loggings.logRoutings if true, the routings will be logged | Default: true
- * @param loggings.logInCatch if true, the error will be logged in the catch block | Default: false
- * @param errorHandler.resolveZodError if true, the zod error will be resolved | Default: true
- * @param errorHandler.overwriteFormat if set, the format of the error will be overwritten | Default: undefined
+ * @param payload the payload for the app
+ * @param source the source folder for the app (should be absolute path)
+ * @param middlewares.cookieParser if true, the cookieParser will be added
+ * @param middlewares.errorHandler if true, the errorHandler will be added
+ * @param middlewares.globalMiddlewares if set, the globalMiddlewares that provided by the function will be added to the root of the app
+ * @param middlewares.notFoundHandler if true, the notFoundHandler will be added
+ * @param middlewares.notFoundHandlerFunction if set, the notFoundHandler will be added with the function
+ * @param loggings.logRoutings if true, the routings will be logged
+ * @param loggings.logInCatch if true, the error will be logged in the catch block
+ * @param errorHandler.resolveZodError if true, the zod error will be resolved
+ * @param errorHandler.overwriteFormat if set, the format of the error will be overwritten
  */
 export type AppExpressSettings = {
 	payload?: AppExpressTypes.Payload;
@@ -34,6 +38,10 @@ export type AppExpressSettings = {
 
 /**
  * Installed route result
+ * @param routePath the path of the route
+ * @param path the path of the file
+ * @param method the method of the route
+ * @param middlewares the middlewares that installed to the route
  */
 export type AppExpressRouteResult = {
 	routePath: string;
@@ -47,6 +55,8 @@ export type AppExpressRouteResult = {
  * @param cookieParser if true, the cookieParser is installed
  * @param globalMiddlewares the middlewares that installed to the root of the app
  * @param installedRoutes the routes that installed to the app
+ * @param errorHandler if true, the errorHandler is installed
+ * @param notFoundHandler if true, the notFoundHandler is installed
  */
 export type AppExpressInstallResult = {
 	cookieParser: boolean;

@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"removeComments": false,
+		"paths": {}
+	},
+	"extends": "./tsconfig.json",
+	"exclude": ["./test/**/*.ts", "./dist/**/*"],
+	"include": ["./src/**/*.ts"]
+}

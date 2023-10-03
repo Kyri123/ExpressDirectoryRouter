@@ -3,6 +3,7 @@ import type express from 'express';
 /**
  * overwrite Types here for global use
  * @example
+ * ```ts
  * declare global {
  *   namespace AppExpressTypes {
  * 	   interface Payload {
@@ -12,13 +13,73 @@ import type express from 'express';
  *     }
  *   }
  * }
+ * ```
  */
 declare global {
+	/**
+	 * overwrite Types here for global use
+	 * @example
+	 * ```ts
+	 * declare global {
+	 *  namespace AppExpressTypes {
+	 * 	 interface Payload {
+	 * 		 upload: string;
+	 * 		 app: string;
+	 * 		 config: string;
+	 *    }
+	 * }
+	 * ```
+	 */
 	namespace AppExpressTypes {
+		/**
+		 * overwrite Types here for global use
+		 * @example
+		 * ```ts
+		 * declare global {
+		 *   namespace AppRequest {
+		 *     interface Payload {
+		 *   	 upload: string;
+		 *   	 app: string;
+		 *   	 config: string;
+		 *     }
+		 *   }
+		 * }
+		 * ```
+		 */
 		interface AppRequest extends express.Request {}
+
+		/**
+		 * overwrite Types here for global use
+		 * @example
+		 * ```ts
+		 * declare global {
+		 *  namespace AppResponse {
+		 * 	 interface Payload {
+		 * 		 upload: string;
+		 * 		 app: string;
+		 * 		 config: string;
+		 *   }
+		 * }
+		 * ```
+		 */
 		interface AppResponse extends express.Response {}
+
+		/**
+		 * overwrite Types here for global use
+		 * @example
+		 * ```ts
+		 * declare global {
+		 *  namespace Payload {
+		 * 	 interface Payload {
+		 * 		 upload: string;
+		 * 		 app: string;
+		 * 		 config: string;
+		 *   }
+		 * }
+		 * ```
+		 */
 		interface Payload {}
 	}
 }
 
-export {};
+export { AppExpressTypes };

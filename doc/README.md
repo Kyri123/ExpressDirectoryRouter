@@ -1,3 +1,5 @@
+@kyri123/express-app-router / [Exports](modules.md)
+
 # ExpressDirectoryRouter
 
 [![Version package](https://badgen.net/npm/v/embedgenerator)](https://npmjs.com/package/embedgenerator) [![DL TOTAL](https://badgen.net/npm/dt/@kyri123/express-app-router)](https://npmjs.com/package/@kyri123/express-app-router) <!--[![LATEST RELEASE](https://badgen.net/github/release/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)--> [![ALL CONTRIBUTOR](https://badgen.net/github/contributors/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)
