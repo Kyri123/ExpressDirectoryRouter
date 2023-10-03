@@ -32,6 +32,7 @@ export async function startScan(
 		});
 	});
 
+	const wildcards: MiddlewareFunction[] = [];
 	const middlewareFile = scanResult.find((p) => {
 		return p.startsWith('middleware.');
 	});
@@ -44,10 +45,14 @@ export async function startScan(
 			const foundmiddlewares = await middlewareQuery.GLOBAL(settings.payload || {});
 			middlewares.push(...foundmiddlewares);
 		}
+		if (middlewareQuery && middlewareQuery.WILDCARD) {
+			const foundmiddlewares = await middlewareQuery.WILDCARD(settings.payload || {});
+			wildcards.push(...foundmiddlewares);
+		}
 	}
 
 	for (const file of scanResult) {
-		await scanDir(app, join(path, file), file, result, settings, cloneDeep(middlewares), middlewareQuery);
+		await scanDir(app, join(path, file), file, result, settings, cloneDeep(middlewares), middlewareQuery, wildcards);
 	}
 }
 
@@ -62,11 +67,12 @@ export async function scanDir(
 	result: AppExpressInstallResult,
 	settings: AppExpressSettings,
 	middlewares: MiddlewareFunction[],
-	middlewareFileResult: MiddlewareFunctionQuery
+	middlewareFileResult: MiddlewareFunctionQuery,
+	wildcards: MiddlewareFunction[]
 ) {
 	const stat = await fs.stat(path);
 	if (!stat.isDirectory()) {
-		await installRoute(app, path, file, result, settings, middlewares, middlewareFileResult);
+		await installRoute(app, path, file, result, settings, middlewares.concat(wildcards), middlewareFileResult);
 	} else {
 		await startScan(app, path, result, settings, middlewares);
 	}
