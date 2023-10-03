@@ -1,6 +1,6 @@
 {
 	"name": "@kyri123/express-app-router",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"private": false,
 	"author": "Oliver Kaufmann <kaufmann.oliver@siemens.com>",
 	"license": "MIT",

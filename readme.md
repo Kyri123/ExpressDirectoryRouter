@@ -1,6 +1,6 @@
 # ExpressDirectoryRouter
 
-![ExpressDirectoryRouter Logo](logo.png)
+[![Version package](https://badgen.net/npm/v/embedgenerator)](https://npmjs.com/package/embedgenerator) [![DL TOTAL](https://badgen.net/npm/dt/@kyri123/express-app-router)](https://npmjs.com/package/@kyri123/express-app-router) <!--[![LATEST RELEASE](https://badgen.net/github/release/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)--> [![ALL CONTRIBUTOR](https://badgen.net/github/contributors/Kyri123/ExpressDirectoryRouter)](https://npmjs.com/package/embedgenerator)
 
 ExpressDirectoryRouter is a lightweight and flexible middleware for Express.js that simplifies routing by automatically handling routes based on the structure of your project directories.
 
@@ -8,10 +8,8 @@ ExpressDirectoryRouter is a lightweight and flexible middleware for Express.js t
 
 -   [Installation](#installation)
 -   [Usage](#usage)
--   [Examples](#examples)
     -   [JavaScript](#javascript)
     -   [TypeScript](#typescript)
--   [API Reference](#api-reference)
 -   [Documentation](https://github.com/Kyri123/ExpressDirectoryRouter/tree/docs/doc)
 -   [Contributing](#contributing)
 -   [License](#license)
@@ -32,7 +30,7 @@ pnpm add @kyri123/express-directory-router
 
 To use ExpressDirectoryRouter, simply require it and use it as middleware in your Express application:
 
-### Javascript:
+### Javascript
 
 ```js
 const express = require('express');
@@ -48,7 +46,7 @@ installAppExpress(app).then(() => {
 });
 ```
 
-### Typescript:
+### Typescript
 
 ```js
 import express from 'express';
