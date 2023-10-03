@@ -2,6 +2,20 @@
 
 # Enumeration: ResponseStatus
 
+JSend Status for the response
+
+**`Param`**
+
+the response was successful
+
+**`Param`**
+
+the response was not successful
+
+**`Param`**
+
+the response was an error
+
 ## Table of contents
 
 ### Enumeration Members
@@ -18,7 +32,7 @@
 
 #### Defined in
 
-[helper/jsend.ts:4](https://github.com/Kyri123/ExpressDirectoryRouter/blob/38dd119/src/helper/jsend.ts#L4)
+[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L10)
 
 ___
 
@@ -28,7 +42,7 @@ ___
 
 #### Defined in
 
-[helper/jsend.ts:3](https://github.com/Kyri123/ExpressDirectoryRouter/blob/38dd119/src/helper/jsend.ts#L3)
+[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L9)
 
 ___
 
@@ -38,4 +52,4 @@ ___
 
 #### Defined in
 
-[helper/jsend.ts:2](https://github.com/Kyri123/ExpressDirectoryRouter/blob/38dd119/src/helper/jsend.ts#L2)
+[helper/jsend.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/4f5444c/src/helper/jsend.ts#L8)
