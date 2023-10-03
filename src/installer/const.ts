@@ -1,4 +1,13 @@
 /**
  * valid methods for the route
+ * @example
+ * ```ts
+ * const route: ValidMethods = 'get';
+ * ```
  */
-export const validMethods = ['get', 'post', 'put', 'delete', 'all', 'head', 'connect', 'options', 'trace', 'middleware'];
+export type ValidMethods = 'get' | 'post' | 'put' | 'delete' | 'all' | 'head' | 'connect' | 'options' | 'trace' | 'middleware';
+
+/**
+ * valid methods for the route
+ */
+export const validMethods: ValidMethods[] = ['get', 'post', 'put', 'delete', 'all', 'head', 'connect', 'options', 'trace', 'middleware'];

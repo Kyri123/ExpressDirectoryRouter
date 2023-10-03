@@ -8,6 +8,37 @@ import { validateInput } from './validate';
  * @param app  the express app
  * @param settings  the settings for the app
  * @returns  the result of the installation
+ * @example
+ * ```ts
+ * const app = express();
+ * const settings: AppExpressSettings = {
+ * 	source: path.join(__dirname, 'routes'),
+ * 	middlewares: {
+ * 		cookieParser: true,
+ * 		errorHandler: true,
+ * 		notFoundHandler: true,
+ * 		globalMiddlewares: (payload) => {
+ * 			return [async (request, response, next) => {
+ * 				next();
+ * 			}];
+ * 		}
+ * 	},
+ * 	loggings: {
+ * 		logRoutings: true,
+ * 		logInCatch: true
+ * 	},
+ * 	errorHandler: {
+ * 		resolveZodError: true,
+ * 		overwriteFormat: (error) => {
+ * 			return {
+ * 				message: error.message,
+ * 				code: error.code,
+ * 				errors: error.errors
+ * 			};
+ * 		}
+ * 	}
+ * };
+ * ```
  */
 export async function installAppExpress(app: ExpressApp, settings: AppExpressSettings): Promise<AppExpressInstallResult> {
 	const result: AppExpressInstallResult = {
