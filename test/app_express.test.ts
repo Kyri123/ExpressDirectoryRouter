@@ -156,6 +156,7 @@ describe('Routing Fetch', () => {
 		{ path: '/test', method: 'GET', should: true },
 		{ path: '/slug/testparam', method: 'POST', should: true },
 		{ path: '/slug/testparam', method: 'GET', should: true },
+		{ path: '/slug/testparam/no-wildcard', method: 'GET', should: true },
 		{ path: '/all/testparam1/testparam2/testparam3', method: 'GET', should: true },
 		{ path: '/slug-all/testparam', method: 'GET', should: true },
 		{ path: '/slug-all/testparam1/testparam2', method: 'GET', should: true },
@@ -203,7 +204,8 @@ describe('Middlewares', () => {
 		{ path: '/test', method: 'POST', should: 1 },
 		{ path: '/test', method: 'GET', should: 2 },
 		{ path: '/slug/:test', method: 'POST', should: 1 },
-		{ path: '/slug/:test', method: 'GET', should: 2 },
+		{ path: '/slug/:test/no-wildcard', method: 'GET', should: 2 },
+		{ path: '/slug/:test', method: 'GET', should: 3 },
 		{ path: '/all/*', method: 'GET', should: 1 },
 		{ path: '/slug-all/:test*', method: 'GET', should: 1 }
 	];
