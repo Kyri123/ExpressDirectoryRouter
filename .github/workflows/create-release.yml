@@ -1,0 +1,53 @@
+name: Release Package Version
+
+on:
+    push:
+        tags:
+            - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+    release:
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: Get Version
+              id: get-version
+              uses: beaconbrigade/package-json-version@v0.3
+              with:
+                  path: .
+            - name: Changelog
+              uses: ardalanamini/auto-changelog@v4
+              id: changelog
+              with:
+                  github-token: ${{ github.token }}
+                  commit-types: |
+                      feat: New Features
+                      fix: Bug Fixes
+                      build: Build System & Dependencies
+                      perf: Performance Improvements
+                      docs: Documentation
+                      test: Tests
+                      refactor: Refactors
+                      chore: Chores
+                      ci: CI
+                      style: Code Style
+                      revert: Reverts
+                  release-name: 'Release: v${{ steps.get-version.outputs.version }}'
+                  mention-authors: true
+                  mention-new-contributors: true
+                  include-compare-link: true
+                  include-pr-links: true
+                  include-commit-links: true
+                  semver: true
+                  use-github-autolink: true
+            - name: Create Release
+              uses: softprops/action-gh-release@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  body: |
+                      ${{ steps.changelog.outputs.changelog }}
+                  prerelease: ${{ steps.changelog.outputs.prerelease }}
