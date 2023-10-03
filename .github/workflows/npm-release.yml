@@ -40,7 +40,10 @@ jobs:
               uses: beaconbrigade/package-json-version@v0.3
               with:
                   path: .
-            - name: Create Tag
-              run: git tag -a ${{ steps.get-version.outputs.version }} -m "Release ${{ steps.get-version.outputs.version }}"
-            - name: Push Tag
-              run: git push upstream ${{ steps.get-version.outputs.version }}
+            - run: echo "previous_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo '')" >> $GITHUB_ENV
+            - name: Create Tag from package.json
+              id: create_tag
+              uses: jaywcjlove/create-tag-action@main
+              if: env.previous_tag
+              with:
+                  package-path: ./package.json
