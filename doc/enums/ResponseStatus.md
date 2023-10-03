@@ -36,7 +36,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:11](https://github.com/Kyri123/ExpressDirectoryRouter/blob/f739104/src/helper/jsend.ts#L11)
+[helper/jsend.ts:11](https://github.com/Kyri123/ExpressDirectoryRouter/blob/5b0ea30/src/helper/jsend.ts#L11)
 
 ---
 
@@ -46,7 +46,7 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/f739104/src/helper/jsend.ts#L10)
+[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/5b0ea30/src/helper/jsend.ts#L10)
 
 ---
 
@@ -56,4 +56,4 @@ https://github.com/omniti-labs/jsend
 
 #### Defined in
 
-[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/f739104/src/helper/jsend.ts#L9)
+[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/5b0ea30/src/helper/jsend.ts#L9)
