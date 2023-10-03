@@ -83,7 +83,7 @@ export type ExpressApp = express.Application | express.Router;
  * 			next();
  * 		}];
  * 	},
- * 	GET: (payload) => {
+ * 	WILDCARD: (payload) => {
  * 		return [async (request, response, next) => {
  * 			next();
  * 		}];
@@ -93,6 +93,7 @@ export type ExpressApp = express.Application | express.Router;
  */
 export type MiddlewareFunctionQuery = {
 	GLOBAL?: MiddleWareInit;
+	WILDCARD?: MiddleWareInit;
 	GET?: MiddleWareInit;
 	POST?: MiddleWareInit;
 	PUT?: MiddleWareInit;

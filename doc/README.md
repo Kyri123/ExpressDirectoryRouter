@@ -12,13 +12,16 @@ ExpressDirectoryRouter is a lightweight and flexible middleware for Express.js t
 -   [Usage](#usage)
     -   [JavaScript](#javascript)
     -   [TypeScript](#typescript)
+    -   [Middleware](#middleware)
+    -   [Directory-Routes](#directory-routes)
+    -   [Route-Functions](#route-functions)
 -   [Documentation](https://github.com/Kyri123/ExpressDirectoryRouter/tree/docs/doc)
 -   [Contributing](#contributing)
 -   [License](#license)
 
 ## Installation
 
-You can install ExpressDirectoryRouter using npm:
+You can install ExpressDirectoryRouter using npm, yarn, or pnpm for example:
 
 ```bash
 npm install @kyri123/express-directory-router
@@ -64,6 +67,86 @@ installAppExpress(app).then(() => {
 });
 ```
 
+### Middleware
+
+Middleware can be used in the following formats the name of the file must ne `middleware.(js|ts)` Following named exports are supported:
+
+-   `GET`
+-   `POST`
+-   `PUT`
+-   `DELETE`
+-   `PATCH`
+-   `GLOBAL` -> GLOBAL is a special middleware that is executed for all routes and methods **(also in subdirectories)**
+-   `WILDCARD` -> WILDCARD is a special middleware that is executed for all routes and methods **(BUT NOT in subdirectories)**
+-   `HEAD`
+-   `OPTIONS`
+-   `ALL`
+-   `TRACE`
+
+```ts
+import { type MiddleWareInit } from '@kyri123/express-directory-router';
+
+export const GET: MiddleWareInit = async (payload) => {
+	return [
+		(req, res, next) => {
+			return next();
+		}
+	];
+};
+
+export const GLOBAL: MiddleWareInit = async (payload) => {
+	return [
+		(req, res, next) => {
+			return next();
+		}
+	];
+};
+```
+
+### Directory-Routes
+
+Route the directory structure is as follows:
+
+| Directory        | Description                                           | Directory            | Express Route      |
+| ---------------- | ----------------------------------------------------- | -------------------- | ------------------ |
+| `XYZ`            | name of the Route for exmaple                         | `xyz/123`            | `/xyz/123`         |
+| `[paramname]`    | will used for params                                  | `xyz/[paramname]`    | `/xyz/:paramname`  |
+| `[paramname...]` | will used for params and route all subdirectorys here | `xyz/[paramname...]` | `/xyz/:paramname*` |
+| `(xyz)`          | will ignored for routing so used for organisation     | `xyz/(group)/123`    | `/xyz/123`         |
+| `[...]`          | Will route all subdirectory here                      | `xyz/[...]`          | `/xyz/*`           |
+| `XYZ`            | name of the Route for exmaple                         | `xyz/123`            | `/xyz/123`         |
+
+### Route-Functions
+
+Routes can be used in the following formats the name of the file must ne `('get'|'post'|'put'|'delete'|'all'|'head'|'connect'|'options'|'trace').(js|ts)`: named exports:
+
+-   `middleware` -> (optional) - Middleware for the route (see [Middleware](#middleware))
+-   `default` -> (required) - The route handler must be a RoutingFunction
+
+````ts
+
+```ts
+import { ResponseStatus, jsend, type MiddleWareInit, type RoutingFunction } from '@kyri123/express-directory-router';
+
+export const middleware: MiddleWareInit = async (payload) => {
+	return [
+		(req, res, next) => {
+			return next();
+		}
+	];
+};
+
+const handler: RoutingFunction = async ({ response, request, next, payload }) => {
+	response.status(200).json(
+		jsend(ResponseStatus.Success, {
+			data: { message: 'Hello World' }
+		})
+	);
+};
+
+export default handler;
+````
+
 ## Documentation
 
 You can find the detailed documentation for ExpressDirectoryRouter in the docs directory.
@@ -81,3 +164,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 Thanks to the contributors of Express.js for providing a powerful web application framework.
+
+```
+
+```
