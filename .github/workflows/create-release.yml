@@ -3,7 +3,7 @@ name: Release Package Version
 on:
     push:
         tags:
-            - '[0-9]+.[0-9]+.[0-9]+'
+            - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
     release:
@@ -22,7 +22,7 @@ jobs:
               uses: ardalanamini/auto-changelog@v4
               id: changelog
               with:
-                  github-token: ${{ github.token }}
+                  github-token: ${{ secrets.GH_TOKEN }}
                   commit-types: |
                       feat: New Features
                       fix: Bug Fixes
@@ -35,7 +35,7 @@ jobs:
                       ci: CI
                       style: Code Style
                       revert: Reverts
-                  release-name: 'Release: v${{ steps.get-version.outputs.version }}'
+                  release-name: ${{ steps.get-version.outputs.version }}
                   mention-authors: true
                   mention-new-contributors: true
                   include-compare-link: true
@@ -46,7 +46,7 @@ jobs:
             - name: Create Release
               uses: softprops/action-gh-release@v1
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
               with:
                   body: |
                       ${{ steps.changelog.outputs.changelog }}

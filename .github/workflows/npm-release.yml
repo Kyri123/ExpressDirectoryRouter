@@ -35,12 +35,9 @@ jobs:
               run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-            - name: Get Version
-              id: get-version
-              uses: beaconbrigade/package-json-version@v0.3
+            - name: Create Tag from package.json
+              id: create_tag
+              uses: jaywcjlove/create-tag-action@main
               with:
-                  path: .
-            - name: Create Tag
-              run: git tag -a ${{ steps.get-version.outputs.version }} -m "Release ${{ steps.get-version.outputs.version }}"
-            - name: Push Tag
-              run: git push upstream ${{ steps.get-version.outputs.version }}
+                  token: ${{ secrets.GH_TOKEN }}
+                  package-path: ./package.json
