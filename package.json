@@ -19,14 +19,14 @@
   "scripts": {
     "create-docs": "typedoc --options typedoc.cjs",
     "dev": "npx nodemon",
-    "build": "pnpm run build:lint && pnpm run build:rollup",
+    "build": "bun run build:lint && bun run build:rollup",
     "build:lint": "eslint --ext .ts ./src/ --fix",
     "build:rollup": "rollup -c --bundleConfigAsCjs",
-    "test": "pnpm run build:rollup && jest --verbose",
+    "test": "bun run build:rollup && jest --verbose",
     "testnb": "jest --verbose",
     "testw": "jest --watch --verbose",
     "prepare": "husky install",
-    "hooks:pre-commit": "pnpm run create-docs && prettier --write . && git add .",
+    "hooks:pre-commit": "bun run create-docs && prettier --write . && git add .",
     "hooks:pre-push": "npm run build",
     "run-prettier": "npx prettier --write **/*.{js,ts,json,tsx,vue,cjs,mjs}"
   },
