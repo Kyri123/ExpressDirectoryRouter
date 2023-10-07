@@ -17,18 +17,18 @@
 		"zod": "^3.22.2"
 	},
 	"scripts": {
-		"create-docs": "typedoc --options typedoc.cjs",
-		"dev": "npx nodemon",
-		"build": "pnpm run build:lint && pnpm run build:rollup",
-		"build:lint": "eslint --ext .ts ./src/ --fix",
-		"build:rollup": "rollup -c --bundleConfigAsCjs",
-		"test": "pnpm run build:rollup && jest --verbose",
-		"testnb": "jest --verbose",
-		"testw": "jest --watch --verbose",
+		"create-docs": "bun typedoc --options typedoc.cjs",
+		"dev": "bun nodemon",
+		"build": "bun run build:lint && bun run build:rollup",
+		"build:lint": "bun eslint --ext .ts ./src/ --fix",
+		"build:rollup": "bun rollup -c --bundleConfigAsCjs",
+		"test": "bun run build:rollup && bun jest --verbose",
+		"testnb": "bun jest --verbose",
+		"testw": "bun jest --watch --verbose",
 		"prepare": "husky install",
-		"hooks:pre-commit": "pnpm run create-docs && prettier --write . && git add .",
-		"hooks:pre-push": "npm run build",
-		"run-prettier": "npx prettier --write **/*.{js,ts,json,tsx,vue,cjs,mjs}"
+		"hooks:pre-commit": "bun run create-docs && bun prettier --write . && git add .",
+		"hooks:pre-push": "bun run build",
+		"run-prettier": "bun prettier --write **/*.{js,ts,json,tsx,vue,cjs,mjs}"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^25.0.4",

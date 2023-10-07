@@ -24,36 +24,36 @@ https://github.com/omniti-labs/jsend
 
 ### Enumeration Members
 
--   [Error](ResponseStatus.md#error)
--   [Fail](ResponseStatus.md#fail)
--   [Success](ResponseStatus.md#success)
+- [Error](ResponseStatus.md#error)
+- [Fail](ResponseStatus.md#fail)
+- [Success](ResponseStatus.md#success)
 
 ## Enumeration Members
 
 ### Error
 
-• **Error** = `"error"`
+• **Error** = ``"error"``
 
 #### Defined in
 
-[helper/jsend.ts:11](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/jsend.ts#L11)
+[helper/jsend.ts:11](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/jsend.ts#L11)
 
----
+___
 
 ### Fail
 
-• **Fail** = `"fail"`
+• **Fail** = ``"fail"``
 
 #### Defined in
 
-[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/jsend.ts#L10)
+[helper/jsend.ts:10](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/jsend.ts#L10)
 
----
+___
 
 ### Success
 
-• **Success** = `"success"`
+• **Success** = ``"success"``
 
 #### Defined in
 
-[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/jsend.ts#L9)
+[helper/jsend.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/jsend.ts#L9)

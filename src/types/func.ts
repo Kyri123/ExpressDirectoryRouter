@@ -1,4 +1,5 @@
 import type express from 'express';
+import type * as core from 'express-serve-static-core';
 import './globals';
 
 /**
@@ -10,9 +11,13 @@ import './globals';
  * };
  * ```
  */
-export type MiddlewareFunctionHandler<Req = AppExpressTypes.AppRequest, Res = AppExpressTypes.AppResponse> = (
-	request: Req,
-	response: Res,
+export type MiddlewareFunctionHandler<
+	Params extends core.ParamsDictionary = core.ParamsDictionary,
+	ReqBody = any,
+	ReqQuery extends core.Query = core.Query
+> = (
+	request: AppExpressTypes.AppRequest<Params, ReqBody, ReqQuery>,
+	response: AppExpressTypes.AppResponse,
 	next: express.NextFunction
 ) => Promise<any | never>;
 
@@ -26,9 +31,7 @@ export type MiddlewareFunctionHandler<Req = AppExpressTypes.AppRequest, Res = Ap
  * };
  * ```
  */
-export type MiddlewareFunction<Req = AppExpressTypes.AppRequest, Res = AppExpressTypes.AppResponse> =
-	| MiddlewareFunctionHandler<Req, Res>
-	| express.RequestHandler<any>;
+export type MiddlewareFunction = MiddlewareFunctionHandler | express.RequestHandler<any>;
 
 /**
  * Type for the init function of the middleware
@@ -54,11 +57,15 @@ export type MiddleWareInit = (payload: AppExpressTypes.Payload) => MiddlewareFun
  * };
  * ```
  */
-export type RoutingFunction<Req = AppExpressTypes.AppRequest, Res = AppExpressTypes.AppResponse> = (handle: {
+export type RoutingFunction<
+	Params extends core.ParamsDictionary = core.ParamsDictionary,
+	ReqBody = any,
+	ReqQuery extends core.Query = core.Query
+> = (handle: {
 	error?: express.Errback;
 	next: express.NextFunction;
-	request: Req;
-	response: Res;
+	request: AppExpressTypes.AppRequest<Params, ReqBody, ReqQuery>;
+	response: AppExpressTypes.AppResponse;
 	payload: AppExpressTypes.Payload;
 }) => Promise<any | never> | any | never;
 
@@ -107,5 +114,5 @@ export type MiddlewareFunctionQuery = {
 
 export type RouteQuery = {
 	middleware?: MiddleWareInit;
-	default?: RoutingFunction;
+	default?: RoutingFunction | RoutingFunction[];
 };

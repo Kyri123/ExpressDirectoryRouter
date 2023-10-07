@@ -2,24 +2,25 @@
 
 # Class: ApiError
 
-Custom error class for API errors they are thrown by the backend and help to identify the status code
+Custom error class for API errors
+they are thrown by the backend and help to identify the status code
 
 ## Hierarchy
 
--   `Error`
+- `Error`
 
-    ↳ **`ApiError`**
+  ↳ **`ApiError`**
 
 ## Table of contents
 
 ### Constructors
 
--   [constructor](ApiError.md#constructor)
+- [constructor](ApiError.md#constructor)
 
 ### Properties
 
--   [errCode](ApiError.md#errcode)
--   [status](ApiError.md#status)
+- [errCode](ApiError.md#errcode)
+- [status](ApiError.md#status)
 
 ## Constructors
 
@@ -29,11 +30,11 @@ Custom error class for API errors they are thrown by the backend and help to ide
 
 #### Parameters
 
-| Name      | Type                                           | Default value          | Description             |
-| :-------- | :--------------------------------------------- | :--------------------- | :---------------------- |
-| `errCode` | `number`                                       | `undefined`            | the error code          |
-| `message` | `string`                                       | `undefined`            | the error message       |
-| `status`  | [`ResponseStatus`](../enums/ResponseStatus.md) | `ResponseStatus.Error` | the status of the error |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `errCode` | `number` | `undefined` | the error code |
+| `message` | `string` | `undefined` | the error message |
+| `status` | [`ResponseStatus`](../enums/ResponseStatus.md) | `ResponseStatus.Error` | the status of the error |
 
 #### Overrides
 
@@ -41,7 +42,7 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/errorClass.ts#L16)
+[helper/errorClass.ts:16](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/errorClass.ts#L16)
 
 ## Properties
 
@@ -51,9 +52,9 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/errorClass.ts#L8)
+[helper/errorClass.ts:8](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/errorClass.ts#L8)
 
----
+___
 
 ### status
 
@@ -61,4 +62,4 @@ Error.constructor
 
 #### Defined in
 
-[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/dae88cf/src/helper/errorClass.ts#L9)
+[helper/errorClass.ts:9](https://github.com/Kyri123/ExpressDirectoryRouter/blob/da3dbf3/src/helper/errorClass.ts#L9)
