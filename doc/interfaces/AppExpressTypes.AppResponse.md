@@ -21,6 +21,6 @@ declare global {
 
 ## Hierarchy
 
--   `Response`
+- `Response`
 
-    ↳ **`AppResponse`**
+  ↳ **`AppResponse`**

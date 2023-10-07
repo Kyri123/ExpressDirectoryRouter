@@ -21,6 +21,6 @@ declare global {
 
 ### Interfaces
 
--   [AppRequest](../interfaces/AppExpressTypes.AppRequest.md)
--   [AppResponse](../interfaces/AppExpressTypes.AppResponse.md)
--   [Payload](../interfaces/AppExpressTypes.Payload.md)
+- [AppRequest](../interfaces/AppExpressTypes.AppRequest.md)
+- [AppResponse](../interfaces/AppExpressTypes.AppResponse.md)
+- [Payload](../interfaces/AppExpressTypes.Payload.md)

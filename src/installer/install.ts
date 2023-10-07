@@ -148,10 +148,14 @@ async function installRoute(
 	app[METHOD](
 		buildPath(path, file, settings),
 		...wrapInHandler(MIDDLEWARES),
+		ROUTE instanceof Array ? 
+		wrapInHandler(ROUTE.map(R => asyncHandler(async (request, response, next) => {
+			return R({ next, request, response, payload: settings.payload || {} });
+		}))) : 
 		asyncHandler(async (request, response, next) => {
 			return ROUTE({ next, request, response, payload: settings.payload || {} });
 		})
-	);
+	); 
 
 	result.installedRoutes.push({
 		routePath: buildPath(path, file, settings),

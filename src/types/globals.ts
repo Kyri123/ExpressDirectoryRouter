@@ -1,4 +1,5 @@
 import type express from 'express';
+import type * as core from 'express-serve-static-core';
 
 /**
  * overwrite Types here for global use
@@ -46,7 +47,12 @@ declare global {
 		 * }
 		 * ```
 		 */
-		interface AppRequest extends express.Request {}
+		interface AppRequest<Params extends core.ParamsDictionary = core.ParamsDictionary, ReqBody = any, ReqQuery extends core.Query = core.Query>
+			extends express.Request {
+			params: Params;
+			body: ReqBody;
+			query: ReqQuery;
+		}
 
 		/**
 		 * overwrite Types here for global use
