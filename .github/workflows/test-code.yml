@@ -17,6 +17,8 @@ jobs:
                 node-version: [16, 18, 20]
         steps:
             - uses: actions/checkout@v3
+            - name: Install bun
+              uses: oven-sh/setup-bun@v1
             - uses: pnpm/action-setup@v2
               with:
                   version: 8
@@ -32,4 +34,4 @@ jobs:
             - name: Install dependencies
               run: pnpm install
             - name: Test Package
-              run: pnpm run test
+              run: bun run test
