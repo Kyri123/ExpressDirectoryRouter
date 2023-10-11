@@ -1,4 +1,4 @@
-import type { MiddleWareInit } from '@dist/types';
+import type { MiddleWareInit } from '@dist/index';
 
 const POST: MiddleWareInit = async (payload) => {
 	return [
